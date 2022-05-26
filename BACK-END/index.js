@@ -10,8 +10,9 @@ app.use(express.json());
 const presidentialServices = require('./services/presidentialService');
 presidentialServices.createServices(app);
 
-const PORT = process.env.PORT || 8080; 
 
-app.listen(PORT, ()=>{
+//const PORT = process.env.PORT || 8080; 
+
+app.listen(3000, ()=>{
     console.log("El servidor esta preparado");
 });
