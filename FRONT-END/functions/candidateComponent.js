@@ -28,15 +28,16 @@ class candidateComponent{
 
     }
 
-
     action(event){
+   
         event.preventDefault();
-        let url = "https://presidentialpoll.herokuapp.com/api/candidates/votes/${this.candidate.id}";
-        fetch(url,{method:'PUT'}).then(response => response.json())
-        
-        window.alert('Se ha registrado su voto');
-        window.location.href = "result.html";
+        let url = `https://presidentialpoll.herokuapp.com/api/candidates/votes/${this.candidate.id}`;
+        fetch(url, {method:'PUT'})
+        .then(response => response.json())
 
-    }   
+                window.alert('Se ha registrado su voto');
+                window.location.href = "result.html";
+          
+    } 
 
 }
