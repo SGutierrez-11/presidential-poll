@@ -6,8 +6,8 @@ class candidateComponent{
 
     render(container){
         let html = `
-        <div class="card" style="width: 18rem;">
-        <img src="${this.candidate.imagePresident}" class="card-img-top" style="width: 18rem">
+        <div class="card" style="width: 18rem; ">
+        <img src="${this.candidate.imagePresident}" class="card-img-top" style="width: 15rem; border-radius: 200px;" >
         <div class="card-body">
         <h5 class="card-title">PRESIDENTE:<br>${this.candidate.president}</h5>
         <p class="card-title">VICEPRESIDENT:<br>${this.candidate.vicepresident}</p>

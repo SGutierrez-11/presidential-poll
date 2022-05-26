@@ -66,7 +66,6 @@ const getCandidatesAPI = async () => {
 
     for(let i in votesCandidates){
         votesCandidates[i]=(votesCandidates[i]/totalVotes)*100;
-        votesCandidates[i]=Math.round(votesCandidates[i]);
     }
     console.log(totalVotes);
     console.log(votesCandidates);
@@ -83,15 +82,15 @@ getCandidatesAPI().then(() => {
           label: 'Percentage of Votes',
           data: votesCandidates,
           backgroundColor: [
-            'rgba(255, 99, 132, 0.1)',
-            'rgba(255, 159, 64, 0.1)',
-            'rgba(255, 205, 86, 0.1)',
-            'rgba(75, 192, 192, 0.1)',
-            'rgba(54, 162, 235, 0.1)',
-            'rgba(153, 102, 255, 0.1)',
-            'rgba(39, 113, 207, 0.1)',
-            'rgba(89, 111, 190, 0.1)',
-            'rgba(201, 203, 207, 0.1)'
+            'rgba(255, 99, 132)',
+            'rgba(255, 159, 64)',
+            'rgba(255, 205, 86)',
+            'rgba(75, 192, 192)',
+            'rgba(54, 162, 235)',
+            'rgba(153, 102, 255)',
+            'rgba(39, 113, 207)',
+            'rgba(89, 111, 190)',
+            'rgba(201, 203, 207)'
           ],
           borderColor: [
             'rgb(255, 99, 132)',
@@ -109,11 +108,20 @@ getCandidatesAPI().then(() => {
       },
       options: {
         responsive: true,
-         plugins: {
+        plugins: {
             legend: {
                position: 'top',
+            },
+            datalabels: {
+              formatter: (value, chart) => {
+                
+                let percentage = (value).toFixed(2)+"%";
+
+                return percentage;
+              },
+              color: '#fff',
             }
-    }
+        }
       }
     });
 }

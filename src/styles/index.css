@@ -3,10 +3,25 @@
 }
 
 #candidateContainer{
+    background-color: papayawhip;
     display: flex;
     flex-direction: row;
     gap: 40px;
     flex-flow: wrap;
     margin-top: 40px;
     justify-content: space-evenly;
+    border-radius: 25px;
+    align-items: center;
+}
+
+.card{
+    width: 250px;
+    height: 800px;
+    border-radius: 40px;
+    background: wheat;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
 }
