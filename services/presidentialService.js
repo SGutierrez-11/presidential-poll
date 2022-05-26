@@ -11,7 +11,7 @@ const createServices = (app) =>{
     });
 
 
-    app.put('/api/candidates/update/:id', (req, res)=>{
+    app.put('/api/candidates/votes/:id', (req, res)=>{
         let president = req.params.id;
         presidentialProvider.changeVotes(president, (result)=>{
             res.send(result);
